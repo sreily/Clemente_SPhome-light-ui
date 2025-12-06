@@ -1,5 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Lighting UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
     <body>
-        <title>Home Lighting UI</title>
+       <h1>Home Lighting Control</h1>
+
+       <div class="card">
+        <h2>Master Control</h2>
+        <button id="masterToggle" class="master-bulb off">
+            <img id="masterBulbImg" src="icons/bulb-on.png" alt="Master Light">
+        </button>
+       </div>
+
+       <div class="room-card">
+        <h3>Living Room</h3>
+        <button class="toggle off">OFF</button>
+        <input type="range" min="0" max="100" value="0" class="brightness">
+       </div>
+
+       <div class="room-card">
+        <h3>Bedroom</h3>
+        <button class="toggle off">OFF</button>
+        <input type="range" min="0" max="100" value="0" class="brightness">
+       </div>
+
+       <div class="room-card">
+        <h3>Kitchen</h3>
+        <button class="toggle off">OFF</button>
+        <input type="range" min="0" max="100" value="0" class="brightness">
+       </div>
+
+       <div class="room-card">
+        <h3>Garage</h3>
+        <button class="toggle off">OFF</button>
+        <input type="range" min="0" max="100" value="0" class="brightness">
+       </div>
+
+       <script src="script.js"></script>
     </body>
 </html>

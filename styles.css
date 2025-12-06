@@ -1,0 +1,84 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #2b2b2b;
+    padding:20px;
+    text-align:center;
+}
+h1{
+    color: #ffc011;
+}
+.card{
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    margin: 15px auto;
+    width:300px;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.card h2{
+    color:#ffc011;
+}
+.room-card h3{
+    color:#ffc011;
+}
+button{
+    padding:8px 15px;
+    border: none;
+    cursor:pointer;
+    background: #ffc011;
+    color:rgb(0, 0, 0);
+}
+button.off{
+    background:#555;
+}
+.brightness {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 8px;
+    border-radius: 5px;
+    background: #555;  /* Default when OFF */
+    outline: none;
+    transition: background 0.3s;
+}
+
+.brightness::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #ffc011;
+    box-shadow: 0 0 10px #ffc011;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+.brightness::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #ffc011;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+.brightness:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.master-bulb {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0 !important;
+}
+
+.master-bulb img {
+    display: block;
+    width: 100px;
+    height: auto;
+    transition: filter 0.4s ease, transform 0.3s ease;
+    filter: grayscale(100%) brightness(0.6);
+}
+
+.master-bulb.on img {
+    filter: drop-shadow(0 0 12px #ffc011) brightness(1.0);
+    transform: scale(1.05);
+}
