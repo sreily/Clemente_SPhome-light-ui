@@ -58,6 +58,18 @@ masterButton.addEventListener("click", () => {
         const toggleButton = room.querySelector(".toggle");
         const slider = room.querySelector(".brightness");
 
+        slider.value = 0;
+        let previousValue = 0;
+        slider.disabled = true;
+        slider.style.background = "#555";
+        toggleButton.textContent = "OFF";
+        toggleButton.classList.add("off");
+
+    slider.addEventListener("input", () => {
+        previousValue = slider.value;
+        slider.style.background = `linear-gradient(to right, #ffc011 ${slider.value}%, #555 ${slider.value}%)`;
+    });
+
         if (allLightsOn) {
             toggleButton.textContent = "ON";
             toggleButton.classList.remove("off");
